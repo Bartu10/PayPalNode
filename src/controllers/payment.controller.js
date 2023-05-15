@@ -3,13 +3,7 @@ import axios from "axios"
 import { PAYPAL_API, PAYPAL_API_CLIENT, PAYPAL_API_SECRET } from "../config"
 
 export const createOrder = async (req, res) => {
-    
-    console.log(req.body.value)
-    console.log(req.body.description)
 
-    
-
-    
     const order = {
         intent: 'CAPTURE',
         purchase_units: [
@@ -25,7 +19,7 @@ export const createOrder = async (req, res) => {
             brand_name: "Classic.com",
             landing_page: "LOGIN",
             user_action: "PAY_NOW",
-            return_url: "http://localhost:3000/capture",
+            return_url: "http://localhost:8081/capture",
             cancel_url: "http://localhost:3000/cancel"
         }
     }
@@ -37,7 +31,7 @@ export const createOrder = async (req, res) => {
         }
     })
 
-    res.send(response.data)
+    res.send(response.data) // Guardar a BD 
 }
 export const captureOrder = async (req, res) => {
 
