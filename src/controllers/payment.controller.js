@@ -19,7 +19,7 @@ export const createOrder = async (req, res) => {
             brand_name: "Classic.com",
             landing_page: "LOGIN",
             user_action: "PAY_NOW",
-            return_url: "http://localhost:8081/capture",
+            return_url: "http://localhost:8081/#/orderprocess",
             cancel_url: "http://localhost:3000/cancel"
         }
     }

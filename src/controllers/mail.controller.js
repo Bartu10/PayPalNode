@@ -18,7 +18,7 @@ export const sendMail =  (req, res) => {
       from: myEmail,
       to: email,
       subject: `Consulta de ${name}`,
-      text: message
+      text: "Hola, gracias por contactarnos, hablale a este numero por whatsapp para que te atienda un asesor: 601280212"
     };
     
     transporter.sendMail(mailOptions, function(error, info){
