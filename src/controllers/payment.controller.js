@@ -20,7 +20,7 @@ export const createOrder = async (req, res) => {
             landing_page: "LOGIN",
             user_action: "PAY_NOW",
             return_url: "https://timeless11.netlify.app/#/orderprocess",
-            cancel_url: "http://localhost:3000/cancel"
+            cancel_url: "https://timeless11.netlify.app/#/"
         }
     }
 
